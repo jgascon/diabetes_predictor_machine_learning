@@ -2,7 +2,7 @@
 Machine Learning Diabetes Predictor with web interface.
 
 
-# INSTALL
+# INSTALL & USE
 
 Open a Terminal in Linux, you need to have python and pyenv installed:
 
@@ -16,8 +16,6 @@ After that, execute these commands in your terminal:
 
     PYTHON_VER="3.12.8"
 
-    pyenv install --list
-
     pyenv install $PYTHON_VER
 
     pyenv local $PYTHON_VER
@@ -28,12 +26,12 @@ After that, execute these commands in your terminal:
 
     pip install -r requirements.txt
 
-    ./start.sh
+    python main.py
 
 
 Open a web browser pointing to:
 
-        http://localhost:5000
+        http://127.0.0.1:5000
 
 
 And follow instructions.
