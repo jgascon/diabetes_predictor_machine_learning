@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta charset="multipart/form-data"> -->
+  <meta charset="utf-8">
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+    .back_button {
+        display: inline-block;
+        position: relative;
+        width: 20%;
+        margin: auto;
+        margin-top: 4mm;
+        margin-bottom: 4mm;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 2mm;
+        padding-top: 5mm;
+        padding-bottom: 5mm;
+        text-align: center;
+        background-color: #008bec;
+        border-radius: 4px;
+        color: white;
+        font-size: 140%;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .back_button:focus {
+        box-shadow: 0px 0px 12px #008bec;
+    }
+
+    .back_button:hover {
+        background-color: #eca800;
+        color: black;
+    }
+</style>
+
+<body>
+    <h1>Diabetes prediction:</h1>
+    <br/>
+    <h1 id="diabetes_result">{{diabetes_result}}</h1>
+    <br/>
+    <h2>Samples: {{number_samples}}</h2>
+    <br/>
+    <h2>Accuracy: {{"{:.2f}".format(accuracy)}}</h2>
+    <br/>
+    <a class="back_button" href="{{url_for('welcome_page')}}">Back</a>
+
+    <script>
+        let diabetes_result = document.getElementById('diabetes_result');
+        if (diabetes_result) {
+            if (diabetes_result.innerHTML == 'Negative') {
+                diabetes_result.style.color = 'darkgreen';
+            } else {
+                diabetes_result.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

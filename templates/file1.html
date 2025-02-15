@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+</head>
+
+<body>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .register_form {
+            display: block;
+            position: relative;
+            margin-left: 50%;
+            top: 2mm;
+            transform: translate(-50%, 0%);
+            margin-top: 1cm;
+            margin-bottom: 2cm;
+            padding: 2mm;
+            padding-bottom: 1cm;
+            text-align: center;
+            vertical-align: top;
+            border: 1px solid black;
+        }
+
+        .register_field_title {
+            display: block;
+            position: relative;
+            margin: 0;
+            margin-top: 4mm;
+            margin-left: 20%;
+            margin-right: 0;
+            text-align: left;
+            font-size: 110%;
+        }
+
+        .register_form_input {
+            display: inline-block;
+            position: relative;
+            margin: auto;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 2mm;
+            padding: 0;
+            padding-top: 2mm;
+            padding-bottom: 2mm;
+            font-size: 120%;
+            border: 1px solid grey;
+        }
+
+        .register_form_input:focus {
+            box-shadow: 0px 0px 12px #008bec;
+        }
+
+        .register_form_button {
+            display: inline-block;
+            position: relative;
+            width: 80%;
+            margin: auto;
+            margin-top: 4mm;
+            margin-bottom: 4mm;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 2mm;
+            padding-top: 5mm;
+            padding-bottom: 5mm;
+            text-align: center;
+            background-color: #008bec;
+            border-radius: 4px;
+            color: white;
+            font-size: 140%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .register_form_button:focus {
+            box-shadow: 0px 0px 12px #008bec;
+        }
+
+        .register_form_button:hover {
+            background-color: #eca800;
+            color: black;
+        }
+    </style>
+
+    <h1>Women's diabetes predictor</h1>
+
+    <p style="text-align: center">
+        Thanks to: <a href="https://www.kaggle.com/uciml/pima-indians-diabetes-database/data">
+            Pima Indians Diabetes Database
+        </a>
+        <br/>
+        <br/>
+        Please, fill the next form in order to obtain a diabetes prediction:
+    </p>
+
+
+    <form class="register_form" action="{{url_for('second_page')}}" method="post">
+
+        <div class="register_field_title">Pregnancies: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 0 and 20
+        </div>
+        <input class="register_form_input" type="number" name="Pregnancies" value="1" size="32"><br/>
+
+        <div class="register_field_title">Glucose: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 0 and 200
+        </div>
+        <input class="register_form_input" type="number" name="Glucose" value="85" size="32"><br/>
+
+        <div class="register_field_title">BloodPressure: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 0 and 122
+        </div>
+        <input class="register_form_input" type="number" name="BloodPressure" value="66" size="32"><br/>
+
+        <div class="register_field_title">SkinThickness: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 0 and 100
+        </div>
+        <input class="register_form_input" type="number" name="SkinThickness" value="29" size="32"><br/>
+
+        <div class="register_field_title">Insulin: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 0 and 850
+        </div>
+        <input class="register_form_input" type="number" name="Insulin" value="0" size="32"><br/>
+
+        <div class="register_field_title">BMI: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 0 and 70
+        </div>
+        <input class="register_form_input" type="number" name="BMI" value="26.6" size="32"><br/>
+
+        <div class="register_field_title">DiabetesPedigreeFunction: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 0.07 and 2.50
+        </div>
+        <input class="register_form_input" type="number" name="DiabetesPedigreeFunction" value="0.351" size="32"><br/>
+
+        <div class="register_field_title">Age: </div>
+        <div class="register_help_text" style="color:blue;">
+            Select a number between 1 and 99
+        </div>
+        <input class="register_form_input" type="number" name="Age" value="31" size="32"><br/>
+
+        <input class="register_form_button" type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
